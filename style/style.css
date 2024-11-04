@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'vazirRegular';
+  font-weight: normal;
+  src: url(../assets/fonts/Vazir-Regular.woff2) format("woff2");
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* list-style: none; */
+}
+
+/* root color */
+:root {
+  --color-body: #fefefe;
+  --color-bgc-card: #eeeeee;
+  --color-green-primary: #219F95;
+  --color-blue-dark: #234894;
+  --color-blue-light: #AFCEDD;
+  --color-heading: #1E1E1E;
+  --color-paragraph: #696969;
+}
+
+/* html font size */
+html {
+  font-size: 62.5%;
+}
+
+/* body style */
+body {
+  background-color: var(--color-body);
+  font-family: 'vazirRegular';
+}
+
+/* main container */
+.container {
+  max-width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* row card's */
+.rows {
+  display: grid;
+}
+
+/* item in the card's */
+.items {
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .rows {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px 30px;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .rows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 20px;
+  }
+
+  .items {
+    margin: 0rem 0rem;
+  }
+}
+
+/* btn style */
+.btn {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--color-green-primary);
+  color: var(--color-body);
+  font-size: 1rem;
+  font-weight: 100;
+  border-radius: 0.5rem;
+  font-family: 'vazirRegular';
+}
+
+/* user card */
+.user__card {
+  width: 100%;
+  /* height: 15rem; */
+  background-color: var(--color-bgc-card);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+}
+
+.header__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* row one in the card */
+.num-upload__header {
+  display: flex;
+  align-items: center;
+}
+
+.box__number-card {
+  background-color: var(--color-blue-light);
+  width: 2.5rem;
+  height: 2.5rem;
+  justify-items: center;
+  align-items: center;
+  border-radius: 0.5rem;
+
+}
+
+.number__card {
+  background-color: var(--color-blue-light);
+  font-size: 1.4rem;
+  color: var(--color-blue-dark);
+}
+
+.upload__text {
+  font-weight: 200;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+}
+
+/* row two in the card */
+.join-request__title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.id__request {
+  margin-top: 0.2rem;
+}
+
+/* row three in the card */
+.user-Owner__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.userData {
+  display: flex;
+  align-items: center;
+}
+
+.profile__user {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+
+.userName__profile {
+  font-size: 1.2rem;
+  padding: 0 0.75rem;
+}
